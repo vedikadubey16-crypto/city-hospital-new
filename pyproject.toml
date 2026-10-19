@@ -2,12 +2,16 @@
 [project]
 name = "city-hospital-new"
 version = "1.0.0"
+description = "City Care Hospital - FastAPI Appointment Booking System"
 requires-python = ">=3.12"
+
 dependencies = [
     "fastapi",
     "uvicorn",
     "sqlalchemy",
-    "psycopg2-binary"
+    "psycopg[binary]",
+    "email-validator",
+    "pydantic"
 ]
 
 [tool.vercel]
