@@ -1,38 +1,30 @@
-City Care Hospital
-This is a simple hospital website that I made to give users basic information about a hospital and its different departments.
+# 🏥 City Care Hospital
 
-About:
-The website contains information about the hospital, available departments, services, and an appointment section. I tried to keep the design simple so that the important information is easy to find.
+A responsive hospital management website designed to simplify appointment booking and provide easy access to healthcare services.
 
-What is included
-   Hospital information
-   Different medical departments
-   Doctor/service information
-   Appointment section
-   Emergency contact details
-   Responsive design
-   Departments
+### 🌐 Live Website
+[Visit City Care Hospital](https://city-hospital-new.vercel.app/)
 
-The website includes the following departments:
-   Cardiology
-   Dentistry
-   General Medicine
-   Pediatrics
-   Orthopedics
-   Pulmonology
+### ✨ Features
+- Responsive and user-friendly interface
+- Hospital departments and services
+- Online appointment booking
+- Appointment confirmation and details
+- Form validation and database integration
 
-Technologies Used
-   HTML
-   CSS
+### 🛠️ Tech Stack
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Python, FastAPI
+- **Database:** Neon PostgreSQL
+- **Deployment:** Vercel
+- **Version Control:** Git & GitHub
 
+### 📌 About
+City Care Hospital is a full-stack web development project that integrates a responsive frontend with a FastAPI backend to manage hospital appointment bookings.
 
-The project is hosted using GitHub Pages.
+### 👩‍💻 Developed By
+**Vedika Dubey**
 
-Live Demo:
-https://vedikadubey16-crypto.github.io/city-hospital/
+---
 
-Purpose
-I made this project to practice creating a complete frontend website and to get more familiar with HTML, CSS, JavaScript, and designing a website around a real-world use case.
-
-Author
-Vedika Dubey
+⭐ If you find this project useful, consider starring the repository!
