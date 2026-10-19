@@ -3,71 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home page</title>
+    <title>Departments & Services | City Care Hospital</title>
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="department.css">
 </head>
-<body>
-    <header><div class="navbar">
-    <a class="start"><span class="logo"><b>  ♥︎ 🩺 ♥︎    CITY CARE HOSPITAL</span></b></a>
-    <a href="main.html" class="start" target="_self">Home</a>
-    <a href="department.html" class="start">Departments </a>
-    <a href="booking.html" class="start" target="_self">Book Appointment</a>
-    <button  >Emergency? Call ☎ 123-456-789</button></div></header>
-    <div id="navbar2"><b>OUR DEPARTMENTS AND SERVICES</b>
-    <span class="info">Comprehensive care for all your health needs</span></div>
-    <div id="hdep1">
-        <div id="cardiology">
-            <img src="cardiology.png" id="cardioimage">
-            <h4 id="headingdep"><b>CARDIOLOGY</h3></b>
-            <h4 id="motodep"><b>Heart Care and Treatment</b></h5>
-            <a href="cardiology.html" id="linkdep"><b><h3>Learn</h3></b></a>
+<body class="departments-page">
+    <!-- Unified Navbar -->
+    <header>
+        <div class="navbar">
+            <a href="main.html" class="logo-container">
+                <span class="logo">♥︎ 🩺 ♥︎ CITY CARE HOSPITAL</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="main.html" class="nav-link">Home</a>
+                <a href="department.html" class="nav-link active">Departments</a>
+                <a href="booking.html" class="nav-link">Book Appointment</a>
+                <a href="appointments.html" class="nav-link">My Bookings</a>
+            </nav>
+            <a href="tel:123456789" class="emergency-button">
+                Emergency? Call ☎ 123-456-789
+            </a>
         </div>
-        <div id="dentistry">
-            <img src="dentistry.png" id="dentistryimage">
-            <h4 id="headingdep"><b>DENTISTRY</h3></b>
-            <h4 id="motodep"><b>Oral Health and Care</b></h5>
-            <a href="dentisitry.html" id="linkdep"><b><h3>Learn</h3></b></a>
-        </div>
-        <div id="medicine">
-            <img src="medicine.png" id="medicineimage">
-            <h4 id="headingdep"><b>GENERAL MEDICINE</h3></b>
-            <h4 id="motodep"><b>Primary Healthcare Services</b></h5>
-            <a href="#" id="linkdep"><b><h3>Learn</h3></b></a>
-        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <div id="navbar2" class="page-banner">
+        <b>OUR DEPARTMENTS AND SERVICES</b>
+        <span class="info">Comprehensive healthcare and specialized medical services tailored for all your needs</span>
     </div>
-    <div id="hdep2">
-        <div id="pediatrics">
-            <img src="pediatrics.png" id="pediatricsimage">
-            <h4 id="headingdep"><b>PEDIATRICS</h3></b>
-            <h4 id="motodep"><b>Heathcare for Children</b></h5>
-            <a href="#" id="linkdep"><b><h3>Learn</h3></b></a>
+
+    <!-- 6 Department Cards in a Responsive Grid -->
+    <main class="dep-container">
+        <div id="hdep1">
+            <div id="cardiology">
+                <img src="cardiology.png" id="cardioimage" alt="Cardiology">
+                <h3 id="headingdep" class="headingdep">CARDIOLOGY</h3>
+                <p id="motodep" class="motodep">Comprehensive heart care, advanced diagnostics, and specialist treatment.</p>
+                <a href="cardiology.html" id="linkdep" class="linkdep"><h3>Learn More</h3></a>
+            </div>
+            <div id="dentistry">
+                <img src="dentistry.png" id="dentistryimage" alt="Dentistry">
+                <h3 id="headingdep" class="headingdep">DENTISTRY</h3>
+                <p id="motodep" class="motodep">Complete oral healthcare, teeth cleaning, root canal, and cosmetic dentistry.</p>
+                <a href="dentisitry.html" id="linkdep" class="linkdep"><h3>Learn More</h3></a>
+            </div>
+            <div id="medicine">
+                <img src="medicine.png" id="medicineimage" alt="General Medicine">
+                <h3 id="headingdep" class="headingdep">GENERAL MEDICINE</h3>
+                <p id="motodep" class="motodep">Primary healthcare services, health check-ups, and chronic disease care.</p>
+                <a href="general medicine.html" id="linkdep" class="linkdep"><h3>Learn More</h3></a>
+            </div>
         </div>
-        <div id="orthopedics">
-            <img src="orthopedics.png" id="orthopedicsimage">
-            <h4 id="headingdep"><b>ORTHOPEDICS</h3></b>
-            <h4 id="motodep"><b>Bone and Joint Care</b></h5>
-            <a href="orthopedic.html" id="linkdep"><b><h3>Learn</h3></b></a>
+        <div id="hdep2">
+            <div id="pediatrics">
+                <img src="pediatrics.png" id="pediatricsimage" alt="Pediatrics">
+                <h3 id="headingdep" class="headingdep">PEDIATRICS</h3>
+                <p id="motodep" class="motodep">Compassionate child healthcare, vaccinations, nutrition, and pediatric care.</p>
+                <a href="pediatrics.html" id="linkdep" class="linkdep"><h3>Learn More</h3></a>
             </div>
-        <div id="pulmunology">
-            <img src="pulmunology.png" id="pulmunologyimage">
-            <h4 id="headingdep"><b>PULMONOLOGY</h3></b>
-            <h4 id="motodep"><b>Lung and respiratory care</b></h5>
-            <a href="pulmonology.html" id="linkdep"><b><h3>Learn</h3></b></a>
+            <div id="orthopedics">
+                <img src="orthopedics.png" id="orthopedicsimage" alt="Orthopedics">
+                <h3 id="headingdep" class="headingdep">ORTHOPEDICS</h3>
+                <p id="motodep" class="motodep">Specialized bone and joint care, fracture treatment, and sports injury rehabilitation.</p>
+                <a href="orthopedic.html" id="linkdep" class="linkdep"><h3>Learn More</h3></a>
             </div>
-    </div>
+            <div id="pulmunology">
+                <img src="pulmunology.png" id="pulmunologyimage" alt="Pulmonology">
+                <h3 id="headingdep" class="headingdep">PULMONOLOGY</h3>
+                <p id="motodep" class="motodep">Advanced lung and respiratory care, asthma treatment, and pulmonary wellness.</p>
+                <a href="pulmonology.html" id="linkdep" class="linkdep"><h3>Learn More</h3></a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Unified Footer -->
     <footer>
-    <div class="last">
-        <div class="footertop">
-        <div class="slogan">
-           <a class="end"><span class="endlogo"><b>  ✚    CITY CARE HOSPITAL</span></b></a>
-           <span class="eend">Better health,brighter future</span>
-         </div>
-    <a href="main.html"class="end" target="_self">Home</a>
-    <a href="#" class="end">Departments </a>
-    <a href="booking.html" class="end" target="_self">Book Appointment</a>
-    <a class="end">Emergency? Call ☎: 123-456-789</a></div>
-    <div class="copyright">©2026 City Care Hospital</div>
-    </div>
+        <div class="last">
+            <div class="footertop">
+                <div class="slogan">
+                    <a href="main.html" class="end">
+                        <span class="endlogo">✚ CITY CARE HOSPITAL</span>
+                    </a>
+                    <span class="eend">Better health, brighter future</span>
+                </div>
+                <nav class="footer-nav">
+                    <a href="main.html" class="end">Home</a>
+                    <a href="department.html" class="end">Departments</a>
+                    <a href="booking.html" class="end">Book Appointment</a>
+                    <a href="appointments.html" class="end">My Bookings</a>
+                    <a href="tel:123456789" class="end footer-emergency">Emergency? Call ☎: 123-456-789</a>
+                </nav>
+            </div>
+            <div class="copyright">© 2026 City Care Hospital. All Rights Reserved.</div>
+        </div>
     </footer>
 </body>
 </html>

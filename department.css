@@ -1,261 +1,181 @@
-*{
-    margin:0px;
-    padding:0px;
-}
-.navbar{
-    height:3.125rem;
-    width:100%;
-    background-color: white;
-    top:0;
-    display:flex;
-    align-items:center;
-    }
-.logo{color: rgb(3, 3, 74);margin-left: 10px;
-margin-right:80px;
-}
-.navbar button{
-    background-color: red;
-    color:white;
-    position:absolute;
-    right:0;
-    height:40px;
-    font-size:1em;
+/* ==========================================================================
+   CITY CARE HOSPITAL - DEPARTMENTS PAGE STYLES (department.css)
+   ========================================================================== */
 
-}
-.start{ 
-    justify-content: center;
-    margin-right:40px;
-    margin-left:20px;
-    color:rgb(4, 4, 147);
-    
-    
-}
+@import url('common.css');
 
-.navbar a{
-    padding: 0%;
-    height:100%;
-    font-size: 1.3em;
-    text-decoration: none;
-}
-#navbar2{
-    
-    height:60px;
-    width:100%;
-    background-color:aliceblue;
-    color:rgb(4, 4, 147);
-    display:flex;
-    justify-content: center;
-    font-size: x-large;
-    align-items: center;
-    flex-direction: column;
-}
-#hdepartment{
-   display: flex;
-   justify-content: center;
-   color:rgb(4, 4, 147);
-   font-size:15px;
-   font-style: bold;
-   font-weight: 100; 
-   margin-top: 20px;
-}
-#motive{
+/* ==========================================================================
+   DEPARTMENTS SECTION & GRID
+   ========================================================================== */
+
+.departments-page {
+    flex: 1;
     display: flex;
-   justify-content: center;
-   color: rgb(3, 3, 74);
-   font-size:15px;
-}
-#hdep1{
-    height:200px;
-    width:100%;
-    display:flex;
-    margin-top: 20px;
-   
-}
-#cardiology{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 150px;
-    margin-top: 20px;
-    display:flex;
     flex-direction: column;
+    background: #ffffff;
+}
 
+.dep-container {
+    max-width: 1200px;
+    width: calc(100% - 2.5rem);
+    margin: 3rem auto 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+    align-items: stretch;
 }
-#cardioimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#headingdep{
-    color:rgb(3, 3, 74);
-    text-align: center;
-    margin-top: 4px;
-}
-#motodep{
-    color: #788891;
-    text-align: center;
-    margin-top: 4px;
-    
-}
-#linkdep{
-    color:rgb(4, 4, 147) ;
-    text-align: center;
-    margin-top: 15px;
-    text-decoration:none;
 
+/* Legacy container compatibility */
+#hdep1, #hdep2 {
+    display: contents;
 }
-#dentistry{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    border-radius: 10px;
-    box-shadow:0px 4px 10px;
-    margin-left: 100px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
 
-}
-#dentistryimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#medicine{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 100px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#medicineimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#hdep2{
-    height:200px;
-    width:100%;
-    display:flex;
-    margin-top: 20px;
-   
-}
-#pediatrics{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 150px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#pediatricsimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#orthopedics{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#bddeee);
-    box-shadow:0px 4px 10px;
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 100px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#orthopedicsimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#pulmunology{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    box-shadow:0px 4px 10px;
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 100px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#pulmunologyimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-.last{margin-top:50px;
-    background-color: rgb(4,4,147);
-    height:4rem;
-    width:100%;
-    display:flex;
-    align-items:center;
-    flex-direction: column;
-    }
-.footertop{
+/* Department Card - Equal Height & Width */
+#cardiology,
+#dentistry,
+#medicine,
+#pediatrics,
+#orthopedics,
+#pulmunology {
+    background: linear-gradient(180deg, #ffffff 0%, #e6f4fc 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 2.25rem 1.75rem 1.85rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-}
-.endlogo{color:white;margin-left: 10px;
-margin-right:80px;
-}
-.end{ 
-    justify-content: center;
-    margin-right:40px;
-    margin-left:20px;
-    color:white;
-    font-size: large;
-    text-decoration: none;
+    text-align: center;
+    justify-content: space-between;
+    min-height: 320px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.slogan{
-    display:flex;
-    flex-direction: column;
+#cardiology:hover,
+#dentistry:hover,
+#medicine:hover,
+#pediatrics:hover,
+#orthopedics:hover,
+#pulmunology:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: #b3dbf2;
 }
-.eend{
-    margin-left:50px;
-    color:white;
+
+/* Card Icon */
+#cardioimage,
+#dentistryimage,
+#medicineimage,
+#pediatricsimage,
+#orthopedicsimage,
+#pulmunologyimage {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 14px rgba(3, 3, 74, 0.08);
+    margin-bottom: 1.25rem;
+    padding: 8px;
+    transition: var(--transition);
 }
-.copyright{
-    color: white;
-    text-align: center;
-    margin-top: 5px;
-    width: 100%;
-    font-size: small;
-    margin-top: 8px;
+
+#cardiology:hover #cardioimage,
+#dentistry:hover #dentistryimage,
+#medicine:hover #medicineimage,
+#pediatrics:hover #pediatricsimage,
+#orthopedics:hover #orthopedicsimage,
+#pulmunology:hover #pulmunologyimage {
+    transform: scale(1.08);
+}
+
+/* Card Headings */
+#headingdep,
+.headingdep {
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem;
+}
+
+/* Card Descriptions */
+#motodep,
+.motodep {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+    flex-grow: 1;
+}
+
+/* Learn More Link / Button */
+#linkdep,
+.linkdep {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1.75rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--primary);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(4, 4, 147, 0.22);
+    transition: var(--transition);
+    margin-top: auto;
+}
+
+#linkdep h3,
+.linkdep h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+#linkdep:hover,
+.linkdep:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(4, 4, 147, 0.35);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* 2 Cards per row on Tablets */
+@media (max-width: 992px) {
+    .dep-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+        margin: 2.5rem auto 3rem;
+    }
+}
+
+/* 1 Card per row on Mobile */
+@media (max-width: 600px) {
+    .dep-container {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        gap: 1.5rem;
+        margin: 2rem auto 2.5rem;
+    }
+
+    #cardiology,
+    #dentistry,
+    #medicine,
+    #pediatrics,
+    #orthopedics,
+    #pulmunology {
+        padding: 2rem 1.5rem;
+        min-height: auto;
+    }
 }

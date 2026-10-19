@@ -1,329 +1,182 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ==========================================================================
+   CITY CARE HOSPITAL - WELCOME / LANDING PAGE (index.css)
+   ========================================================================== */
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    color: rgb(3, 3, 74);
-    background: #ffffff;
-}
+@import url('common.css');
 
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar {
-    width: 100%;
-    height: 70px;
-
-    display: flex;
-    align-items: center;
-
-    background: white;
-
-    border-bottom: 1px solid #d8eaf5;
-
-    padding-left: 40px;
-}
-
-
-/* Hospital Logo */
-
-.logo {
-    color: rgb(4, 4, 147);
-
-    font-size: 27px;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-}
-
-
-/* =========================
-   LANDING SECTION
-========================= */
-
-.landing {
-    width: 100%;
-    min-height: calc(100vh - 120px);
-
+.landing-body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #ffffff;
+}
 
+/* ==========================================================================
+   LANDING HERO SECTION
+   ========================================================================== */
+
+.landing {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #90cfef,
-            #f9f9f9
-        );
-
+    padding: 3.5rem 1.5rem;
+    background: linear-gradient(135deg, #90cfef 0%, #f4fafe 55%, #e0f1fb 100%);
     position: relative;
-
     overflow: hidden;
 }
 
-
-/* Decorative circles */
-
+/* Subtle decorative circles */
 .landing::before {
     content: "";
-
     position: absolute;
-
-    width: 450px;
-    height: 450px;
-
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.35);
-
-    top: -220px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -200px;
     left: -150px;
+    pointer-events: none;
 }
-
 
 .landing::after {
     content: "";
-
     position: absolute;
-
-    width: 500px;
-    height: 500px;
-
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
-
-    background: rgba(144, 207, 239, 0.25);
-
-    bottom: -280px;
-    right: -180px;
+    background: radial-gradient(circle, rgba(144, 207, 239, 0.35) 0%, rgba(144, 207, 239, 0) 70%);
+    bottom: -250px;
+    right: -200px;
+    pointer-events: none;
 }
 
+/* Welcome Card Wrapper */
+.landing-content {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 35px rgba(3, 3, 74, 0.09);
+    padding: 3.5rem 2.5rem;
+    transition: var(--transition);
+}
 
-/* Medical symbols */
+.landing-content:hover {
+    box-shadow: 0 20px 45px rgba(3, 3, 74, 0.13);
+}
 
+/* Medical Symbol / Badge */
 .medical-symbol {
-    font-size: 32px;
-
-    color: rgb(4, 4, 147);
-
-    margin-bottom: 30px;
-
-    letter-spacing: 7px;
-
-    position: relative;
-    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+    background: #eaf5fc;
+    padding: 0.5rem 1.75rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid #cce5f7;
+    margin-bottom: 2rem;
+    letter-spacing: 4px;
 }
 
-
-/* Welcome */
-
+/* Headings */
 .landing h1 {
-    font-size: 32px;
-
-    color: rgb(3, 3, 74);
-
-    margin-bottom: 12px;
-
-    position: relative;
-    z-index: 1;
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
 }
-
-
-/* Hospital Name */
 
 .landing h2 {
-    font-size: 52px;
-
-    color: rgb(4, 4, 147);
-
-    margin-bottom: 25px;
-
-    letter-spacing: 1px;
-
-    position: relative;
-    z-index: 1;
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--primary-dark);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.25rem;
 }
-
-
-/* Tagline */
 
 .tagline {
-    font-size: 27px;
-
-    font-weight: bold;
-
-    color: rgb(3, 3, 74);
-
-    margin-bottom: 12px;
-
-    position: relative;
-    z-index: 1;
+    font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
 }
-
-
-/* Description */
 
 .description {
-    font-size: 19px;
-
-    color: #333;
-
-    margin-bottom: 40px;
-
-    position: relative;
-    z-index: 1;
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
 }
 
-
-/* =========================
-   CONTINUE BUTTON
-========================= */
-
+/* Continue Button */
 .continue-button {
-    display: inline-block;
-
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
     text-decoration: none;
-
-    background: rgb(4, 4, 147);
-
-    color: white;
-
-    padding: 16px 65px;
-
-    border-radius: 6px;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #ffffff;
+    padding: 1.1rem 3.5rem;
+    border-radius: var(--radius-pill);
+    font-size: 1.1rem;
+    font-weight: 800;
     letter-spacing: 1px;
-
-    border: 2px solid rgb(4, 4, 147);
-
-    position: relative;
-    z-index: 1;
-
-    transition: 0.3s;
+    box-shadow: 0 6px 20px rgba(4, 4, 147, 0.3);
+    transition: var(--transition);
+    border: 2px solid transparent;
 }
-
 
 .continue-button:hover {
-    background: white;
-
-    color: rgb(4, 4, 147);
-
-    transform: translateY(-3px);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 28px rgba(4, 4, 147, 0.4);
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    width: 100%;
-
-    height: 50px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    background: rgb(4, 4, 147);
-
-    color: white;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 13px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
 
 @media (max-width: 768px) {
-
-    .navbar {
-        height: 65px;
-
-        padding: 0;
-
-        justify-content: center;
-    }
-
-
-    .logo {
-        font-size: 19px;
-
-        text-align: center;
-    }
-
-
     .landing {
-        min-height: calc(100vh - 115px);
-
-        padding: 30px 20px;
+        padding: 2rem 1rem;
     }
 
+    .landing-content {
+        padding: 2.5rem 1.5rem;
+        border-radius: 18px;
+    }
 
     .medical-symbol {
-        font-size: 24px;
-
-        letter-spacing: 4px;
-
-        margin-bottom: 25px;
+        font-size: 1.2rem;
+        gap: 0.5rem;
+        letter-spacing: 2px;
+        padding: 0.4rem 1.25rem;
+        margin-bottom: 1.5rem;
     }
-
-
-    .landing h1 {
-        font-size: 25px;
-    }
-
-
-    .landing h2 {
-        font-size: 34px;
-
-        line-height: 1.2;
-
-        margin-bottom: 20px;
-    }
-
-
-    .tagline {
-        font-size: 21px;
-    }
-
-
-    .description {
-        font-size: 16px;
-
-        margin-bottom: 30px;
-    }
-
 
     .continue-button {
-        width: 200px;
-
-        padding: 14px 20px;
-    }
-
-
-    footer {
-        font-size: 11px;
+        width: 100%;
+        max-width: 280px;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
     }
 }

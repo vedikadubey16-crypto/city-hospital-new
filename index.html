@@ -4,55 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City Care Hospital</title>
-
+    <title>Welcome to City Care Hospital</title>
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body>
+<body class="landing-body">
 
-    <!-- Header -->
-    <header class="navbar">
-
-        <div class="logo">
-            ♥︎ ⚕ ♥︎ CITY CARE HOSPITAL
+    <!-- Unified Navbar -->
+    <header>
+        <div class="navbar">
+            <a href="main.html" class="logo-container">
+                <span class="logo">♥︎ 🩺 ♥︎ CITY CARE HOSPITAL</span>
+            </a>
+            <a href="main.html" class="btn btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem; border-radius: var(--radius-pill);">
+                Enter Website →
+            </a>
         </div>
-
     </header>
-
 
     <!-- Main Landing Section -->
     <main class="landing">
+        <div class="landing-content">
+            <div class="medical-symbol">
+                ✚ &nbsp; ♥ &nbsp; ⚕ &nbsp; ♥ &nbsp; ✚
+            </div>
 
-        <div class="medical-symbol">
-            ✚ &nbsp; ♥ &nbsp; ⚕ &nbsp; ♥ &nbsp; ✚
+            <h1>WELCOME TO</h1>
+            <h2>CITY CARE HOSPITAL</h2>
+
+            <p class="tagline">
+                YOUR HEALTH, OUR PRIORITY
+            </p>
+
+            <p class="description">
+                Delivering compassionate, patient-centered, and world-class healthcare services for you and your family.
+            </p>
+
+            <!-- Continue Button -->
+            <a href="main.html" class="continue-button">
+                EXPLORE HOSPITAL &rarr;
+            </a>
         </div>
-
-
-        <h1>WELCOME TO</h1>
-
-        <h2>CITY CARE HOSPITAL</h2>
-
-        <p class="tagline">
-            YOUR HEALTH, OUR PRIORITY
-        </p>
-
-        <p class="description">
-            Quality healthcare services for you and your family
-        </p>
-
-
-        <!-- Continue Button -->
-        <a href="main.html" class="continue-button">
-            CONTINUE
-        </a>
-
     </main>
 
-
-    <!-- Footer -->
+    <!-- Unified Footer -->
     <footer>
-        <p>© 2026 City Care Hospital. All Rights Reserved.</p>
+        <div class="last">
+            <div class="copyright" style="border: none; padding: 0; margin: 0;">
+                © 2026 City Care Hospital. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
 </body>

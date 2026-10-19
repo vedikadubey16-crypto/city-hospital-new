@@ -1,2210 +1,518 @@
-*{
-    margin:0px;
-    padding:0px;
-}
-.navbar{
-    height:3.125rem;
-    width:100%;
-    background-color: white;
-    top:0;
-    display:flex;
-    }
-.logo{color: rgb(4, 4, 147);margin-left: 10px;
-margin-right:80px;
-}
-.navbar button{
-    background-color: red;
-    position:absolute;
-    right:0;
-    height:40px;
-    font-size:1em;
-    color:white;
+/* ==========================================================================
+   CITY CARE HOSPITAL - HOMEPAGE STYLES (main.css)
+   ========================================================================== */
 
-}
-.start{ 
-    justify-content: center;
-    margin-right:40px;
-    margin-left:20px;
-    color:rgb(4, 4, 147);
-    
-    
+@import url('common.css');
+
+/* ==========================================================================
+   HERO SECTION (#block)
+   ========================================================================== */
+
+#block {
+    width: 100%;
+    background: linear-gradient(135deg, #90cfef 0%, #f4fafe 55%, #e0f1fb 100%);
+    border-bottom: 1px solid var(--border-color);
+    padding: 3.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.navbar a{
-    padding: 0%;
-    height:100%;
-    font-size: 1.3em;
-    text-decoration: none;
-}
-#block{
-    height:300px;
-    width:100%;
-    background: linear-gradient(135deg, #90cfef, #f9f9f9);
-    display:flex ;
-    justify-content: space-between;
-}
-.image{
-    height:300px;
-    width:290px;
-    object-fit: cover;
-    margin-right: 100px;
-    border-radius:30px ;
-    
-}
-.text{
-    display:flex;
-    flex-direction: column;
-    column-gap:0;
-}
-#maintext{
-    color: rgb(3, 3, 74);
-    font-size: 40px;
-    margin-top: 30px;
-    margin-left: 200px;
-    
-}
-#extra{
-    font-size: 20px;
-    color: <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Cardiology - City Care Hospital</title>
-
-    <link rel="stylesheet" href="index.css">
-
-
-    <style>
-
-        /* =========================
-           GENERAL
-        ========================= */
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Georgia, serif;
-            color: rgb(4,4,147);
-            background: white;
-        }
-
-
-        /* =========================
-           COMMON SECTION
-        ========================= */
-
-        .main-section {
-            width: 100%;
-            padding: 35px 0;
-            background: white;
-        }
-
-
-        .section-box {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            margin: 5px 0 25px;
-            color: rgb(4,4,147);
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .cardio-hero {
-            width: 100%;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #90cfef,
-                    #f9f9f9
-                );
-
-            padding: 40px 0;
-        }
-
-
-        .hero-inside {
-            width: 90%;
-            max-width: 1100px;
-
-            margin: auto;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 30px;
-        }
-
-
-        .hero-text {
-            width: 55%;
-        }
-
-
-        .hero-text h1 {
-            font-size: 45px;
-            margin: 0 0 15px;
-            color: rgb(4,4,147);
-        }
-
-
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.5;
-            margin: 8px 0;
-        }
-
-
-        .hero-image {
-            width: 330px;
-            height: 230px;
-
-            object-fit: contain;
-
-            border-radius: 15px;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-box {
-            background:
-                linear-gradient(
-                    to bottom,
-                    white,
-                    #9fdaf8
-                );
-
-            border-radius: 15px;
-
-            padding: 25px 35px;
-
-            box-shadow:
-                0 4px 12px rgba(0,0,0,0.15);
-        }
-
-
-        .about-box p {
-            font-size: 17px;
-            line-height: 1.7;
-            text-align: justify;
-        }
-
-
-        /* =========================
-           SERVICES
-        ========================= */
-
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-
-        .service-card {
-            width: 240px;
-            min-height: 150px;
-
-            padding: 20px;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    white,
-                    #9fdaf8
-                );
-
-            border-radius: 15px;
-
-            box-shadow:
-                0 4px 12px rgba(0,0,0,0.15);
-
-            transition: 0.3s;
-        }
-
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-
-        .service-card h3 {
-            margin-top: 5px;
-            color: rgb(4,4,147);
-        }
-
-
-        .service-card p {
-            line-height: 1.5;
-        }
-
-
-        /* =========================
-           WHAT WE TREAT
-        ========================= */
-
-        .treat-section {
-            width: 100%;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #90cfef,
-                    #f9f9f9
-                );
-
-            padding: 40px 0;
-        }
-
-
-        .treat-box {
-            width: 90%;
-            max-width: 1100px;
-
-            margin: auto;
-
-            background: white;
-
-            border-radius: 15px;
-
-            padding: 30px;
-
-            box-shadow:
-                0 4px 12px rgba(0,0,0,0.12);
-        }
-
-
-        .treat-title {
-            text-align: center;
-
-            font-size: 32px;
-
-            margin-top: 0;
-            margin-bottom: 25px;
-
-            color: rgb(4,4,147);
-        }
-
-
-        .treat-container {
-            display: flex;
-
-            justify-content: center;
-
-            gap: 20px;
-
-            flex-wrap: wrap;
-        }
-
-
-        .treat-card {
-            width: 220px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    white,
-                    #e5f6fd
-                );
-
-            border-radius: 14px;
-
-            padding: 18px;
-
-            text-align: center;
-
-            box-shadow:
-                0 3px 10px rgba(0,0,0,0.13);
-
-            transition: 0.3s;
-        }
-
-
-        .treat-card:hover {
-            transform: translateY(-5px);
-        }
-
-
-        .treat-card img {
-            width: 65px;
-            height: 65px;
-
-            object-fit: contain;
-
-            margin-bottom: 8px;
-        }
-
-
-        .treat-card h3 {
-            margin: 8px 0;
-
-            font-size: 19px;
-
-            color: rgb(4,4,147);
-        }
-
-
-        .treat-card p {
-            font-size: 14px;
-
-            line-height: 1.4;
-
-            margin: 0;
-        }
-
-
-        /* =========================
-           DOCTORS
-        ========================= */
-
-        .doctors-area {
-            width: 900px;
-            max-width: 95%;
-
-            margin: auto;
-        }
-
-
-        .doctors {
-            display: flex;
-
-            justify-content: center;
-
-            align-items: stretch;
-
-            gap: 18px;
-
-            flex-wrap: nowrap;
-        }
-
-
-        .doctor-card {
-            flex: 1;
-
-            max-width: 280px;
-
-            padding: 18px;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    white,
-                    #9fdaf8
-                );
-
-            border-radius: 15px;
-
-            box-shadow:
-                0 4px 12px rgba(0,0,0,0.15);
-        }
-
-
-        .doctor-card img {
-            width: 145px;
-            height: 145px;
-
-            object-fit: cover;
-
-            border-radius: 50%;
-
-            border: 4px solid white;
-
-            box-shadow:
-                0 3px 8px rgba(0,0,0,0.15);
-        }
-
-
-        .doctor-card h3 {
-            font-size: 19px;
-
-            margin: 12px 0 5px;
-        }
-
-
-        .doctor-card p {
-            margin: 7px 0;
-        }
-
-
-        .doctor-button {
-            display: inline-block;
-
-            margin-top: 8px;
-
-            padding: 8px 14px;
-
-            background: rgb(4,4,147);
-
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 7px;
-
-            font-family: Arial, sans-serif;
-        }
-
-
-        /* =========================
-           WHY CHOOSE US
-        ========================= */
-
-        .benefits {
-            display: flex;
-
-            justify-content: center;
-
-            gap: 20px;
-
-            flex-wrap: wrap;
-        }
-
-
-        .benefit-card {
-            width: 205px;
-
-            min-height: 180px;
-
-            padding: 20px;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    white,
-                    #9fdaf8
-                );
-
-            border-radius: 15px;
-
-            box-shadow:
-                0 4px 10px rgba(0,0,0,0.13);
-        }
-
-
-        .benefit-card img {
-            width: 65px;
-            height: 65px;
-
-            object-fit: contain;
-        }
-
-
-        .benefit-card h3 {
-            font-size: 18px;
-        }
-
-
-        /* =========================
-           HOW TO VISIT
-        ========================= */
-
-        .visit-box {
-            background:
-                linear-gradient(
-                    to bottom,
-                    white,
-                    #9fdaf8
-                );
-
-            border-radius: 15px;
-
-            padding: 25px 40px;
-
-            box-shadow:
-                0 4px 12px rgba(0,0,0,0.13);
-        }
-
-
-        .visit-box p {
-            font-size: 17px;
-            line-height: 1.6;
-        }
-
-
-        /* =========================
-           FAQ
-        ========================= */
-
-        .faq-container {
-            width: 90%;
-            max-width: 850px;
-
-            margin: auto;
-        }
-
-
-        .faq {
-            margin-bottom: 12px;
-        }
-
-
-        .faq-question {
-            padding: 15px;
-
-            background:
-                linear-gradient(
-                    to right,
-                    #90cfef,
-                    #f9f9f9
-                );
-
-            border-radius: 8px;
-
-            cursor: pointer;
-
-            font-weight: bold;
-        }
-
-
-        .faq-answer {
-            display: none;
-
-            padding: 15px;
-
-            background: #f5fbff;
-
-            line-height: 1.5;
-
-            border-radius: 0 0 8px 8px;
-        }
-
-
-        /* =========================
-           APPOINTMENT
-        ========================= */
-
-        .appointment-section {
-            width: 100%;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #90cfef,
-                    #f9f9f9
-                );
-
-            padding: 40px 0;
-        }
-
-
-        .appointment-box {
-            width: 85%;
-            max-width: 950px;
-
-            margin: auto;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 25px;
-
-            padding: 30px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    white,
-                    #9fdaf8
-                );
-
-            border-radius: 15px;
-
-            box-shadow:
-                0 4px 12px rgba(0,0,0,0.15);
-        }
-
-
-        .booking-button {
-            background: rgb(4,4,147);
-
-            color: white;
-
-            padding: 13px 25px;
-
-            text-decoration: none;
-
-            border-radius: 8px;
-
-            font-family: Arial, sans-serif;
-
-            font-weight: bold;
-
-            white-space: nowrap;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 768px) {
-
-            .hero-inside {
-                flex-direction: column;
-
-                text-align: center;
-            }
-
-
-            .hero-text {
-                width: 100%;
-            }
-
-
-            .hero-text h1 {
-                font-size: 35px;
-            }
-
-
-            .hero-image {
-                width: 280px;
-            }
-
-
-            .doctors {
-                flex-wrap: wrap;
-            }
-
-
-            .doctor-card {
-                min-width: 230px;
-            }
-
-
-            .appointment-box {
-                flex-direction: column;
-
-                text-align: center;
-            }
-
-        }
-
-    </style>
-
-</head>
-
-
-<body>
-
-
-<!-- =================================
-     HEADER
-================================= -->
-
-<header>
-
-    <div class="navbar">
-
-        <a class="start">
-
-            <span class="logo">
-
-                <b>
-                    ♥︎ 🩺 ♥︎ CITY CARE HOSPITAL
-                </b>
-
-            </span>
-
-        </a>
-
-
-        <a
-            href="index.html"
-            class="start"
-        >
-            Home
-        </a>
-
-
-        <a
-            href="department.html"
-            class="start"
-        >
-            Departments
-        </a>
-
-
-        <a
-            href="booking.html"
-            class="start"
-        >
-            Book Appointment
-        </a>
-
-
-        <button>
-            Emergency? Call ☎ 123-456-789
-        </button>
-
-    </div>
-
-</header>
-
-
-<!-- =================================
-     HERO
-================================= -->
-
-<section class="cardio-hero">
-
-    <div class="hero-inside">
-
-        <div class="hero-text">
-
-            <h1>
-                CARDIOLOGY
-            </h1>
-
-            <p>
-                Heart Care and Treatment
-            </p>
-
-            <p>
-                Comprehensive cardiac care from
-                experienced specialists using modern
-                medical facilities.
-            </p>
-
-        </div>
-
-
-        <img
-            src="cardiology.png"
-            class="hero-image"
-            alt="Cardiology"
-        >
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     ABOUT
-================================= -->
-
-<section class="main-section">
-
-    <div class="section-box">
-
-        <div class="about-box">
-
-            <h2 class="section-title">
-                About Cardiology
-            </h2>
-
-
-            <p>
-
-                The Cardiology Department at City Care Hospital
-                provides comprehensive diagnosis, treatment and
-                management of heart-related conditions.
-
-            </p>
-
-
-            <p>
-
-                Our experienced cardiologists provide
-                patient-centered care using modern diagnostic
-                facilities and advanced treatment methods.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     SERVICES
-================================= -->
-
-<section class="main-section">
-
-    <div class="section-box">
-
-        <h2 class="section-title">
-            Our Cardiology Services
-        </h2>
-
-
-        <div class="services">
-
-
-            <div class="service-card">
-
-                <h3>
-                    Heart Check-up
-                </h3>
-
-                <p>
-                    Complete cardiac health evaluation
-                    and routine heart screening.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <h3>
-                    ECG
-                </h3>
-
-                <p>
-                    Examination of the electrical
-                    activity of the heart.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <h3>
-                    Echocardiography
-                </h3>
-
-                <p>
-                    Detailed examination of heart
-                    structure and function.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <h3>
-                    Cardiac Consultation
-                </h3>
-
-                <p>
-                    Specialist consultation for
-                    heart-related problems.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     WHAT WE TREAT
-================================= -->
-
-<section class="treat-section">
-
-    <div class="treat-box">
-
-        <h2 class="treat-title">
-            What We Treat
-        </h2>
-
-
-        <div class="treat-container">
-
-
-            <!-- HEART DISEASE -->
-
-            <div class="treat-card">
-
-                <img
-                    src="heart-disease.png"
-                    alt="Heart Disease"
-                >
-
-                <h3>
-                    Heart Disease
-                </h3>
-
-                <p>
-                    Diagnosis and management of
-                    various heart conditions.
-                </p>
-
-            </div>
-
-
-            <!-- BLOOD PRESSURE -->
-
-            <div class="treat-card">
-
-                <img
-                    src="blood-pressure.png"
-                    alt="High Blood Pressure"
-                >
-
-                <h3>
-                    High Blood Pressure
-                </h3>
-
-                <p>
-                    Monitoring and treatment of
-                    hypertension.
-                </p>
-
-            </div>
-
-
-            <!-- ARRHYTHMIA -->
-
-            <div class="treat-card">
-
-                <img
-                    src="arrhythmia.png"
-                    alt="Arrhythmia"
-                >
-
-                <h3>
-                    Arrhythmia
-                </h3>
-
-                <p>
-                    Diagnosis and management of
-                    irregular heart rhythms.
-                </p>
-
-            </div>
-
-
-            <!-- CHEST PAIN -->
-
-            <div class="treat-card">
-
-                <img
-                    src="chest-pain.png"
-                    alt="Chest Pain"
-                >
-
-                <h3>
-                    Chest Pain
-                </h3>
-
-                <p>
-                    Evaluation of chest pain and
-                    related cardiac conditions.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     DOCTORS
-================================= -->
-
-<section class="main-section">
-
-    <div class="section-box">
-
-        <h2 class="section-title">
-            Our Cardiology Specialists
-        </h2>
-
-
-        <div class="doctors-area">
-
-            <div class="doctors">
-
-
-                <div class="doctor-card">
-
-                    <img
-                        src="doctor1.jpg"
-                        alt="Female doctor"
-                    >
-
-                    <h3>
-                        Dr. Ananya Sharma
-                    </h3>
-
-                    <p>
-                        Cardiologist
-                    </p>
-
-                    <p>
-                        12+ Years Experience
-                    </p>
-
-                    <a
-                        href="booking.html"
-                        class="doctor-button"
-                    >
-                        Book Appointment
-                    </a>
-
-                </div>
-
-
-                <div class="doctor-card">
-
-                    <img
-                        src="doctor2.jpg"
-                        alt="Male doctor"
-                    >
-
-                    <h3>
-                        Dr. Rahul Mehta
-                    </h3>
-
-                    <p>
-                        Interventional Cardiologist
-                    </p>
-
-                    <p>
-                        15+ Years Experience
-                    </p>
-
-                    <a
-                        href="booking.html"
-                        class="doctor-button"
-                    >
-                        Book Appointment
-                    </a>
-
-                </div>
-
-
-                <div class="doctor-card">
-
-                    <img
-                        src="doctor3.jpg"
-                        alt="Female doctor"
-                    >
-
-                    <h3>
-                        Dr. Priya Kapoor
-                    </h3>
-
-                    <p>
-                        Cardiac Specialist
-                    </p>
-
-                    <p>
-                        10+ Years Experience
-                    </p>
-
-                    <a
-                        href="booking.html"
-                        class="doctor-button"
-                    >
-                        Book Appointment
-                    </a>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     WHY CHOOSE US
-================================= -->
-
-<section class="main-section">
-
-    <div class="section-box">
-
-        <h2 class="section-title">
-            Why Choose City Care Hospital?
-        </h2>
-
-
-        <div class="benefits">
-
-
-            <div class="benefit-card">
-
-                <img
-                    src="expdoc.png"
-                    alt="Expert Doctors"
-                >
-
-                <h3>
-                    Expert Doctors
-                </h3>
-
-                <p>
-                    Experienced and caring doctors.
-                </p>
-
-            </div>
-
-
-            <div class="benefit-card">
-
-                <img
-                    src="quickserv.png"
-                    alt="Quick Service"
-                >
-
-                <h3>
-                    Quick Service
-                </h3>
-
-                <p>
-                    Timely care for your needs.
-                </p>
-
-            </div>
-
-
-            <div class="benefit-card">
-
-                <img
-                    src="advfac.png"
-                    alt="Advanced Facilities"
-                >
-
-                <h3>
-                    Advanced Facilities
-                </h3>
-
-                <p>
-                    Modern technology and equipment.
-                </p>
-
-            </div>
-
-
-            <div class="benefit-card">
-
-                <img
-                    src="care.png"
-                    alt="Patient Centric Care"
-                >
-
-                <h3>
-                    Patient Centric Care
-                </h3>
-
-                <p>
-                    Your health is our top priority.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     HOW TO VISIT
-================================= -->
-
-<section class="main-section">
-
-    <div class="section-box">
-
-        <div class="visit-box">
-
-            <h2 class="section-title">
-                How to Visit Our Cardiology Department
-            </h2>
-
-
-            <p>
-                <b>1.</b>
-                Book an appointment with our cardiologist.
-            </p>
-
-
-            <p>
-                <b>2.</b>
-                Visit City Care Hospital on your appointment date.
-            </p>
-
-
-            <p>
-                <b>3.</b>
-                Meet the cardiologist for consultation.
-            </p>
-
-
-            <p>
-                <b>4.</b>
-                Complete the recommended tests if required.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     FAQ
-================================= -->
-
-<section class="main-section">
-
-    <div class="section-box">
-
-        <h2 class="section-title">
-            Frequently Asked Questions
-        </h2>
-
-
-        <div class="faq-container">
-
-
-            <div class="faq">
-
-                <div
-                    class="faq-question"
-                    onclick="toggleFAQ(this)"
-                >
-                    When should I visit a cardiologist?
-                </div>
-
-
-                <div class="faq-answer">
-
-                    You should consider visiting a cardiologist
-                    if you experience symptoms such as chest pain,
-                    shortness of breath or irregular heartbeat.
-
-                </div>
-
-            </div>
-
-
-            <div class="faq">
-
-                <div
-                    class="faq-question"
-                    onclick="toggleFAQ(this)"
-                >
-                    What tests may be required?
-                </div>
-
-
-                <div class="faq-answer">
-
-                    Depending on your symptoms, your doctor may
-                    recommend ECG, echocardiography or other
-                    cardiac evaluations.
-
-                </div>
-
-            </div>
-
-
-            <div class="faq">
-
-                <div
-                    class="faq-question"
-                    onclick="toggleFAQ(this)"
-                >
-                    Can I book an appointment online?
-                </div>
-
-
-                <div class="faq-answer">
-
-                    Yes. Click the Book Appointment button
-                    to schedule your visit.
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     BOOK APPOINTMENT
-================================= -->
-
-<section class="appointment-section">
-
-    <div class="appointment-box">
-
-        <div>
-
-            <h2>
-                Book Your Cardiology Appointment
-            </h2>
-
-            <p>
-                Schedule your visit with our experienced
-                cardiology specialists.
-            </p>
-
-        </div>
-
-
-        <a
-            href="booking.html"
-            class="booking-button"
-        >
-            BOOK APPOINTMENT
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     FOOTER
-================================= -->
-
-<footer>
-
-    <div class="last">
-
-        <div class="footertop">
-
-
-            <div class="slogan">
-
-                <a class="end">
-
-                    <span class="endlogo">
-
-                        <b>
-                            ✚ CITY CARE HOSPITAL
-                        </b>
-
-                    </span>
-
-                </a>
-
-
-                <span class="eend">
-                    Better health, brighter future
-                </span>
-
-            </div>
-
-
-            <a
-                href="index.html"
-                class="end"
-            >
-                Home
-            </a>
-
-
-            <a
-                href="department.html"
-                class="end"
-            >
-                Departments
-            </a>
-
-
-            <a
-                href="booking.html"
-                class="end"
-            >
-                Book Appointment
-            </a>
-
-
-            <a class="end">
-                Emergency? Call ☎: 123-456-789
-            </a>
-
-
-        </div>
-
-
-        <div class="copyright">
-
-            ©2026 City Care Hospital
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-<script>
-
-function toggleFAQ(element) {
-
-    let answer = element.nextElementSibling;
-
-    if (answer.style.display === "block") {
-
-        answer.style.display = "none";
-
-    } else {
-
-        answer.style.display = "block";
-
-    }
-
-}
-
-</script>
-
-
-</body>
-
-</html>);
-    margin-left: 200px;
-    
-}
-#bbutton{
-    background-color: rgb(255, 0, 0);
-    height:60px;
-    width:250px;
-    border-radius: 10px;
-    margin-left: 200px;
-    margin-top: 20px;
-    font-size: 15px;
-    color:white;
-}
-#symbol{
-     justify-content: center;
-     font-size: xx-large;
-     margin-bottom: 50px;
-}
-#hdepartment{
-   display: flex;
-   justify-content: center;
-   color:rgb(4, 4, 147);
-   font-size:15px;
-   font-style: bold;
-   font-weight: 100; 
-   margin-top: 20px;
-}
-#motive{
-    display: flex;
-   justify-content: center;
-   color: rgb(3, 3, 74);
-   font-size:15px;
-}
-#hdep1{
-    height:200px;
-    width:100%;
-    display:flex;
-   
-}
-#cardiology{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 150px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#cardioimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#headingdep{
-    color:rgb(3, 3, 74);
-    text-align: center;
-    margin-top: 4px;
-}
-#motodep{
-    color: #788891;
-    text-align: center;
-    margin-top: 4px;
-    
-}
-#linkdep{
-    color:rgb(4, 4, 147) ;
-    text-align: center;
-    margin-top: 15px;
-    text-decoration:none;
-
-}
-#dentistry{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    border-radius: 10px;
-    box-shadow:0px 4px 10px;
-    margin-left: 100px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#dentistryimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#medicine{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 100px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#medicineimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#hdep2{
-    height:200px;
-    width:100%;
-    display:flex;
-    margin-top: 20px;
-   
-}
-#pediatrics{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 150px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#pediatricsimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#orthopedics{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#bddeee);
-    box-shadow:0px 4px 10px;
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 100px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#orthopedicsimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#pulmunology{
-    height:200px;
-    width:250px;
-    background: linear-gradient(to bottom, white,#9fdaf8);
-    box-shadow:0px 4px 10px;
-    box-shadow:0px 4px 10px;
-    border-radius: 10px;
-    margin-left: 100px;
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-
-}
-#pulmunologyimage{
-    height: 80px;
-    width:80px;
-    border-radius:100%;
-
-    display:flex;
-    margin-left: 90px;
-    margin-top: 10px;
-}
-#book{
-    height:80px;
-    width:970px;
-    box-shadow:0px 4px 10px;
-    margin-top: 60px;
-    border-radius: 10px;
-    margin-left: 140px;
-    display:flex;
-    flex-direction: row;
-}
-#calender{
-    height:70px;
-    width:70px;
-    margin-top: 5px;
-    border-radius: 100%;
-    margin-left:30px;
-}
-#matter{
-    display: flex;
-    flex-direction: column;
-}
-#hbook{
-    color:rgb(4, 4, 147);
-    margin-top: 10px;
-    font-size: larger;
-    margin-left: 40px;
-}
-#cbook{
-    color: #788891;
-    margin-top: 5px;
-    margin-left: 40px;
-}
-#bookingbutton{
-    background-color:rgb(4,4,147);
-    margin-left: 350px;
-    height:40px;
-    margin-top: 20px;
-    width:100px;
-
-}
-#textbutton{
-    color:white;
-    text-decoration: none;
-}
-#importance{
-    height:220px;
-    width:100%;
-    margin-top: 30px;
-    background-color:rgb(229, 244, 252);
-    display: flex;
-    flex-direction: column;
-  
-}
-#himp{
-   color:rgb(4,4,147);
-    font-size: 25px;
-    text-align: center;
-    margin-top:20px;
-}
-#benefits{
-    display:flex;
-    flex-direction: row;
-}
-#expdoc{
-   display:flex;
-   flex-direction:column ;
-}
-#expdocimg{
-    height:80px;
-    width:80px;
-    margin-left: 140px;
-    margin-top: 7px;;
-    border-radius:100%;
-
-}
-#bimp{
-    color:rgb(4,4,147);
-    font-size: large;
-    margin-left: 140px;
-    margin-top: 10px;
-    
-}
-#simp{
-    color:rgb(4,4,147);
-    font-size:15px;
-    margin-left:140px;
-}
-#quickser{
-   display:flex;
-   flex-direction:column ;
-}
-#quickservimg{
-    height:80px;
-    width:80px;
-    margin-left: 140px;
-    margin-top: 7px;
-    border-radius:100%;
-}
-#advfac{
-   display:flex;
-   flex-direction:column ;
-}
-#advfacimg{
-    height:80px;
-    width:80px;
-    margin-left: 140px;
-    margin-top: 7px;
-    border-radius:100%;
-}
-#care{
-   display:flex;
-   flex-direction:column ;
-}
-#careimg{
-    height:80px;
-    width:80px;
-    margin-left: 140px;
-    margin-top: 7px;
-    border-radius:100%;
-}
-.last{margin-top:30px;
-    background-color: rgb(4,4,147);
-    height:4rem;
-    width:100%;
-    display:flex;
-    align-items:center;
-    flex-direction: column;
-    }
-.footertop{
+.hero-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
 }
-.endlogo{color:white;margin-left: 10px;
-margin-right:80px;
+
+.text {
+    flex: 1;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-.end{ 
-    justify-content: center;
-    margin-right:40px;
-    margin-left:20px;
-    color:white;
-    font-size: large;
+
+#maintext {
+    color: var(--primary-dark);
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+#extra {
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    color: var(--text-muted);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+#bbutton {
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+    color: #ffffff;
+    border: none;
+    height: 52px;
+    padding: 0 1.75rem;
+    border-radius: var(--radius-pill);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.35);
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
 }
 
-.slogan{
-    display:flex;
-    flex-direction: column;
+#bbutton:hover {
+    background: linear-gradient(135deg, #b71c1c, #8e0000);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.45);
 }
-.eend{
-    margin-left:50px;
-    color:white;
+
+#symbol {
+    font-size: 1.35rem;
+    color: var(--primary);
+    opacity: 0.85;
+    margin: 0.75rem 0;
+    letter-spacing: 3px;
 }
-.copyright{
-    color: white;
+
+.image {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    border: 5px solid #ffffff;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.image:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   DEPARTMENTS SECTION
+   ========================================================================== */
+
+#hdepartment {
     text-align: center;
-    margin-top: 5px;
-    width: 100%;
-    font-size: small;
-    margin-top: 8px;
+    margin-top: 4rem;
+    padding: 0 1rem;
 }
 
+#hdepartment h1 {
+    color: var(--primary-dark);
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
 
-/* =====================================================
-   MOBILE RESPONSIVE DESIGN
-   This section only affects screens 768px and below.
-   Desktop design remains unchanged.
-   ===================================================== */
+#motive {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+    margin-top: 0.35rem;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+}
 
-@media (max-width: 768px) {
+/* Department Grid Wrapper */
+.dep-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: calc(100% - 2rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
 
-    /* ================= HEADER ================= */
+/* Legacy container compatibility */
+#hdep1, #hdep2 {
+    display: contents;
+}
 
-    .navbar {
-        height: auto;
-        min-height: 60px;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        gap: 5px;
-        box-sizing: border-box;
-    }
+#cardiology,
+#dentistry,
+#medicine,
+#pediatrics,
+#orthopedics,
+#pulmunology {
+    background: linear-gradient(180deg, #ffffff 0%, #e3f3fc 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem 1.5rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    min-height: 280px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
 
-    .logo {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        font-size: 18px;
-    }
+#cardiology:hover,
+#dentistry:hover,
+#medicine:hover,
+#pediatrics:hover,
+#orthopedics:hover,
+#pulmunology:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: #b9dcf0;
+}
 
-    .start {
-        margin: 5px 8px;
-        font-size: 15px;
-    }
+#cardioimage,
+#dentistryimage,
+#medicineimage,
+#pediatricsimage,
+#orthopedicsimage,
+#pulmunologyimage {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(3, 3, 74, 0.08);
+    margin: 0 0 1rem 0;
+    padding: 6px;
+}
 
-    .navbar a {
-        height: auto;
-        font-size: 15px;
-    }
+#headingdep,
+.headingdep {
+    color: var(--primary-dark);
+    font-size: 1.18rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.35rem;
+}
 
-    .navbar button {
-        position: static;
-        width: 95%;
-        height: 40px;
-        margin: 5px auto;
-        font-size: 14px;
-    }
+#motodep,
+.motodep {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
 
+#linkdep,
+.linkdep {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 1.4rem;
+    border-radius: var(--radius-pill);
+    background-color: rgba(4, 4, 147, 0.08);
+    color: var(--primary);
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+}
 
-    /* ================= HERO SECTION ================= */
+#linkdep h3,
+.linkdep h3 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin: 0;
+}
 
-    #block {
-        width: 100%;
-        height: auto;
-        min-height: 500px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 25px 15px;
-        box-sizing: border-box;
-    }
+#linkdep:hover,
+.linkdep:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    transform: scale(1.05);
+}
 
-    .text {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* ==========================================================================
+   CALL TO ACTION STRIPS (#book & #appointment)
+   ========================================================================== */
 
-    #maintext {
-        margin: 20px 0 10px 0;
-        font-size: 32px;
-        text-align: center;
-    }
+#book,
+#appointment {
+    max-width: 1100px;
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    padding: 1.4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    transition: var(--transition);
+}
 
-    #extra {
-        margin: 10px 0;
-        text-align: center;
-        font-size: 17px;
-    }
+#book:hover,
+#appointment:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: #b4dbf3;
+}
 
-    #bbutton {
-        margin: 20px 0;
-        width: 220px;
-        height: 55px;
-    }
+.strip-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
 
-    #symbol {
-        text-align: center;
-        margin: 10px 0;
-    }
+#calender,
+#acalender {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #eaf5fc;
+    padding: 8px;
+    flex-shrink: 0;
+}
 
-    .image {
-        width: 90%;
-        max-width: 290px;
-        height: auto;
-        margin: 15px auto;
-        object-fit: cover;
-    }
+#matter,
+#amatter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
 
+#hbook,
+#happointment {
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
 
-    /* ================= DEPARTMENT HEADING ================= */
+#cbook,
+#cappointment {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
 
-    #hdepartment {
-        width: 100%;
-        text-align: center;
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
+#bookingbutton,
+#appointmentbutton {
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-md);
+    height: 48px;
+    padding: 0 1.5rem;
+    font-weight: 700;
+    font-size: 0.92rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(4, 4, 147, 0.2);
+}
 
-    #motive {
-        width: 100%;
-        text-align: center;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
+#bookingbutton:hover,
+#appointmentbutton:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(4, 4, 147, 0.3);
+}
 
+#textbutton,
+#atextbutton {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+}
 
-    /* ================= DEPARTMENT CARDS ================= */
+/* ==========================================================================
+   WHY CHOOSE CITY CARE HOSPITAL (#importance)
+   ========================================================================== */
 
-    #hdep1,
-    #hdep2 {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-    }
+#importance {
+    width: 100%;
+    background: linear-gradient(135deg, #eef7fc 0%, #f8fbfe 100%);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 4.5rem 1.5rem;
+    margin-top: 4rem;
+}
 
-    #cardiology,
-    #dentistry,
-    #medicine,
-    #pediatrics,
-    #orthopedics,
-    #pulmunology {
-        width: 90%;
-        max-width: 300px;
-        height: 210px;
-        margin: 15px auto;
-        box-sizing: border-box;
-    }
+#mimp {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+}
 
-    #cardioimage,
-    #dentistryimage,
-    #medicineimage,
-    #pediatricsimage,
-    #orthopedicsimage,
-    #pulmunologyimage {
-        display: block;
-        margin: 10px auto;
-    }
+#himp {
+    text-align: center;
+    color: var(--primary-dark);
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    font-weight: 800;
+    margin-bottom: 3rem;
+}
 
+#benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+}
 
-    /* ================= BOOKING STRIP ================= */
+#expdoct,
+#quickserv,
+#advfac,
+#care {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    padding: 2.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition);
+}
 
-    #book {
-        width: 90%;
-        height: auto;
-        min-height: 180px;
-        margin: 30px auto;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-sizing: border-box;
-    }
+#expdoct:hover,
+#quickserv:hover,
+#advfac:hover,
+#care:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: #b9dcf0;
+}
 
-    #calender {
-        margin: 5px auto;
-    }
+#expdocimg,
+#quickservimg,
+#advfacimg,
+#careimg {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #eaf5fc;
+    padding: 10px;
+    margin-bottom: 1.25rem;
+}
 
-    #matter {
-        width: 100%;
-        text-align: center;
-    }
+#bimp {
+    color: var(--primary-dark);
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
 
-    #hbook,
-    #cbook {
-        margin-left: 0;
-        text-align: center;
-    }
+#simp {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
 
-    #bookingbutton {
-        margin: 15px auto;
-    }
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
 
-
-    /* ================= WHY CHOOSE US ================= */
-
-    #importance {
-        width: 100%;
-        height: auto;
-        padding: 25px 10px;
-        box-sizing: border-box;
-    }
-
-    #mimp {
-        width: 100%;
-    }
-
-    #himp {
-        text-align: center;
-        margin-bottom: 15px;
+/* Tablets (landscape and small laptops) */
+@media (max-width: 992px) {
+    .dep-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     #benefits {
-        width: 100%;
-        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .hero-wrapper {
+        gap: 2rem;
+    }
+
+    .image {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+/* Tablets and Mobile */
+@media (max-width: 768px) {
+    #block {
+        padding: 2.5rem 1rem;
+    }
+
+    .hero-wrapper {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+        gap: 2rem;
     }
 
-    #expdoct,
-    #quickserv,
-    #advfac,
-    #care {
+    .text {
+        align-items: center;
+        max-width: 100%;
+    }
+
+    #bbutton {
         width: 100%;
-        display: flex;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .image {
+        width: 240px;
+        height: 240px;
+        border-radius: 20px;
+    }
+
+    #book,
+    #appointment {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        margin-bottom: 20px;
+        padding: 1.75rem 1.25rem;
+        gap: 1.25rem;
     }
 
-    #expdocimg,
-    #quickservimg,
-    #advfacimg,
-    #careimg {
-        margin: 10px auto;
-    }
-
-    #bimp,
-    #simp {
-        margin-left: 0;
-        text-align: center;
-    }
-
-
-    /* ================= FOOTER ================= */
-
-    footer {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .last {
-        width: 100%;
-        height: auto;
-        padding: 20px 10px;
-        box-sizing: border-box;
-    }
-
-    .footertop {
-        display: flex;
+    .strip-info {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        gap: 12px;
+        gap: 0.75rem;
     }
 
-    .slogan {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .endlogo {
-        margin: 0;
-    }
-
-    .end {
-        margin: 5px 0;
-        font-size: 15px;
-    }
-
-    .eend {
-        margin: 0;
-        text-align: center;
-    }
-
-    .copyright {
+    #bookingbutton,
+    #appointmentbutton {
         width: 100%;
-        text-align: center;
-        margin-top: 15px;
+        max-width: 300px;
+    }
+
+    #importance {
+        padding: 3rem 1rem;
+        margin-top: 2.5rem;
     }
 }
-/* ================= APPOINTMENTS SECTION ================= */
 
-/* ================= APPOINTMENTS SECTION ================= */
+/* Small mobile devices */
+@media (max-width: 600px) {
+    .dep-grid-container {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
 
-#appointment{
-    height:80px;
-    width:970px;
-    box-shadow:0px 4px 10px;
-    margin-top:20px;
-    border-radius:10px;
-    margin-left:140px;
-    display:flex;
-    flex-direction:row;
-}
-
-#acalender{
-    height:70px;
-    width:70px;
-    margin-top:5px;
-    border-radius:100%;
-    margin-left:30px;
-}
-
-#amatter{
-    display:flex;
-    flex-direction:column;
-}
-
-#happointment{
-    color:rgb(4,4,147);
-    margin-top:10px;
-    font-size:larger;
-    margin-left:40px;
-}
-
-#cappointment{
-    color:#788891;
-    margin-top:5px;
-    margin-left:40px;
-}
-
-#appointmentbutton{
-    background-color:rgb(4,4,147);
-    margin-left:350px;
-    height:40px;
-    margin-top:20px;
-    width:160px;
-    border:none;
-    padding:0;
-}
-
-#atextbutton{
-    color:white;
-    text-decoration:none;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:100%;
-    height:100%;
-    white-space:nowrap;
+    #benefits {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+    }
 }
