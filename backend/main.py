@@ -24,14 +24,12 @@ app = FastAPI(
 
 
 
-# backend folder
 BACKEND_DIR = Path(__file__).resolve().parent
 
-# Main project folder containing HTML/CSS files
 FRONTEND_DIR = BACKEND_DIR.parent
 
 
-=
+
 
 app.add_middleware(
     CORSMiddleware,
