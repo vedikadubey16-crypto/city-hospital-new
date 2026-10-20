@@ -10,7 +10,7 @@
 
 <body class="booking-page">
 
-    <!-- Unified Navbar -->
+    
     <header>
         <div class="navbar">
             <a href="main.html" class="logo-container">
@@ -28,13 +28,12 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
+    
     <div id="navbar2" class="page-banner">
         <b>BOOK YOUR APPOINTMENT</b>
         <span class="info">Fill in the form below to schedule your consultation with our specialist doctors</span>
     </div>
 
-    <!-- Main Booking Form Card -->
     <main id="content">
         <form class="details" id="appointmentForm">
 
@@ -109,7 +108,6 @@
                 >
             </div>
 
-            <!-- DYNAMIC REASON DROPDOWN -->
             <div class="field full-width">
                 <label for="reason"><b>Reason for your visit *</b></label>
                 <select id="reason" required disabled>
@@ -123,7 +121,6 @@
         </form>
     </main>
 
-    <!-- Unified Footer -->
     <footer>
         <div class="last">
             <div class="footertop">
@@ -145,9 +142,7 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT FOR DYNAMIC DEPARTMENT REASONS AND FASTAPI BOOKING -->
     <script>
-    // Department-wise services from hospital backend & pages
     const departmentFacilities = {
         "Cardiology": [
             "Heart Check-up",
@@ -195,7 +190,6 @@
     departmentSelect.addEventListener("change", function() {
         const selectedDepartment = departmentSelect.value;
 
-        // Clear previous options
         reasonSelect.innerHTML = "";
 
         const defaultOption = document.createElement("option");
@@ -220,13 +214,11 @@
         });
     });
 
-    // Connect form with FastAPI backend
     const form = document.getElementById("appointmentForm");
 
     form.addEventListener("submit", async function(event) {
         event.preventDefault();
 
-        // Collect patient information
         const appointmentData = {
             full_name: document.getElementById("name").value.trim(),
             date_of_birth: document.getElementById("dob").value,
@@ -246,7 +238,6 @@
             }
         }
 
-        // Verify selected service belongs to department
         const validReasons = departmentFacilities[appointmentData.department] || [];
         if (!validReasons.includes(appointmentData.reason)) {
             alert("Please select a valid reason for your department.");
@@ -257,14 +248,13 @@
         button.disabled = true;
 
         try {
-            // Send data to FastAPI
             const response = await fetch("/api/appointments", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(appointmentData)
-            });
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(appointmentData)
+});
 
             
 const responseText = await response.text();
@@ -301,8 +291,6 @@ if (!result.appointment_id) {
 }
 
             if (response.ok) {
-                // Appointment saved by FastAPI.
-                // Save confirmed appointment locally for appointments.html
                 let historySaved = false;
                 try {
                     localStorage.setItem(
@@ -323,7 +311,6 @@ if (!result.appointment_id) {
                     result.appointment_id
                 );
 
-                // Redirect to the appointment table
                 if (historySaved) {
                     window.location.href = "appointments.html";
                 } else {

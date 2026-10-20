@@ -11,9 +11,7 @@ from datetime import date
 import os
 
 
-# ==========================================
-# FASTAPI APPLICATION
-# ==========================================
+
 
 app = FastAPI(
     title="City Care Hospital API",
@@ -24,9 +22,7 @@ app = FastAPI(
 
 
 
-# ==========================================
-# PROJECT PATHS
-# ==========================================
+
 
 # backend folder
 BACKEND_DIR = Path(__file__).resolve().parent
@@ -35,9 +31,7 @@ BACKEND_DIR = Path(__file__).resolve().parent
 FRONTEND_DIR = BACKEND_DIR.parent
 
 
-# ==========================================
-# CORS CONFIGURATION
-# ==========================================
+=
 
 app.add_middleware(
     CORSMiddleware,
@@ -51,12 +45,7 @@ app.add_middleware(
 )
 
 
-# ==========================================
-# DATABASE CONNECTION
-# ==========================================
 
-# Uses SQLite locally.
-# Can use PostgreSQL with DATABASE_URL on Render.
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
@@ -65,7 +54,7 @@ if not DATABASE_URL:
         f"sqlite:///{(BACKEND_DIR / 'hospital.db').as_posix()}"
     )
 
-# Support older PostgreSQL URL format
+
 if DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace(
         "postgres://",
@@ -93,9 +82,7 @@ SessionLocal = sessionmaker(
 Base = declarative_base()
 
 
-# ==========================================
-# DATABASE TABLE
-# ==========================================
+
 
 class AppointmentDB(Base):
 
@@ -124,13 +111,11 @@ class AppointmentDB(Base):
     reason = Column(String(500), nullable=False)
 
 
-# Create database tables
+
 Base.metadata.create_all(bind=engine)
 
 
-# ==========================================
-# PYDANTIC INPUT MODEL
-# ==========================================
+
 
 class Appointment(BaseModel):
 
@@ -144,9 +129,6 @@ class Appointment(BaseModel):
     reason: str
 
 
-# ==========================================
-# DEPARTMENT SERVICES
-# ==========================================
 
 department_facilities = {
 
@@ -195,9 +177,7 @@ department_facilities = {
 }
 
 
-# ==========================================
-# HEALTH CHECK API
-# ==========================================
+
 
 @app.get("/api/health")
 def health_check():
@@ -208,9 +188,7 @@ def health_check():
     }
 
 
-# ==========================================
-# GET DEPARTMENTS
-# ==========================================
+
 
 @app.get("/api/departments")
 def get_departments():
@@ -218,14 +196,12 @@ def get_departments():
     return department_facilities
 
 
-# ==========================================
-# BOOK APPOINTMENT
-# ==========================================
+
 
 @app.post("/api/appointments", status_code=201)
 def book_appointment(appointment: Appointment):
 
-    # Validate department
+    
     if appointment.department not in department_facilities:
 
         raise HTTPException(
@@ -233,7 +209,7 @@ def book_appointment(appointment: Appointment):
             detail="Invalid department selected"
         )
 
-    # Validate selected reason
+    
     allowed_reasons = department_facilities[
         appointment.department
     ]
@@ -245,7 +221,7 @@ def book_appointment(appointment: Appointment):
             detail="Invalid reason for selected department"
         )
 
-    # Validate appointment date
+    
     if appointment.preferred_date < date.today():
 
         raise HTTPException(
@@ -294,17 +270,12 @@ def book_appointment(appointment: Appointment):
         db.close()
 
 
-# ==========================================
-# VIEW ALL APPOINTMENTS
-# ==========================================
 
-# This endpoint contains patient information.
-# Do not expose it publicly without authentication.
 
 @app.get("/api/appointments", include_in_schema=False)
 def get_appointments():
 
-    # Disabled by default for public deployment.
+    
     if os.getenv("ENABLE_APPOINTMENT_LIST") != "true":
         raise HTTPException(
             status_code=403,
@@ -363,8 +334,6 @@ def home():
     return FileResponse(homepage)
 
 
-# Serve HTML, CSS, JS and images
-# Keep this at the very bottom.
 
 app.mount(
     "/",

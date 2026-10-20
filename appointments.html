@@ -14,10 +14,7 @@
             background: #ffffff;
         }
 
-        /* ==========================================================================
-           MAIN CONTENT & TABLE CONTAINER
-           ========================================================================== */
-
+        
         #content {
             width: 100%;
             max-width: 1240px;
@@ -70,7 +67,7 @@
             border: 1px solid #b7ebd0;
         }
 
-        /* Scrollable Table Wrapper */
+        
         .table-wrapper {
             width: 100%;
             overflow-x: auto;
@@ -140,7 +137,7 @@
             border: 1px solid #d5ebf9;
         }
 
-        /* Action Buttons */
+        
         .button-container {
             display: flex;
             justify-content: center;
@@ -182,9 +179,7 @@
             color: var(--primary-dark);
         }
 
-        /* ==========================================================================
-           RESPONSIVE BREAKPOINTS
-           ========================================================================== */
+        
 
         @media (max-width: 768px) {
             #content {
@@ -219,7 +214,7 @@
 
 <body class="appointments-page">
 
-    <!-- Unified Navbar -->
+    
     <header>
         <div class="navbar">
             <a href="main.html" class="logo-container">
@@ -237,13 +232,13 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
+    
     <div id="navbar2" class="page-banner">
         <b>YOUR BOOKED APPOINTMENT</b>
         <span class="info">View the confirmed details of your scheduled hospital visit</span>
     </div>
 
-    <!-- Main Content: Appointment Table -->
+    
     <main id="content">
         <div class="table-container">
             <div class="table-header-block">
@@ -308,7 +303,7 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT TO DISPLAY LATEST BOOKED APPOINTMENT -->
+   
     <script>
     function loadAppointments() {
         const tableBody = document.getElementById("appointmentsBody");
@@ -368,7 +363,7 @@
         message.innerHTML = `✅ Your appointment has been confirmed successfully!${appointmentIdText}`;
     }
 
-    // Display appointment when page loads
+    
     loadAppointments();
     </script>
 </body>
